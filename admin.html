@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#05070e">
+  <title>ACW Admin | Advanced Computer Works</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/admin.js" defer></script>
+</head>
+<body class="admin-page">
+  <header class="admin-topbar">
+    <a class="brand" href="index.html" aria-label="Advanced Computer Works home">
+      <span class="brand-mark"><span>ACW</span></span>
+      <span class="brand-copy"><strong>Advanced Computer Works</strong><small>Private Admin</small></span>
+    </a>
+    <a class="button button-secondary admin-home-link" href="index.html"><i data-lucide="arrow-up-right" aria-hidden="true"></i><span>View site</span></a>
+  </header>
+
+  <main class="admin-main">
+    <section id="login-view" class="admin-login glass-panel">
+      <p class="admin-kicker">PRIVATE ACCESS</p>
+      <h1>Sign in to ACW</h1>
+      <p class="muted">Manage incoming requests and published articles.</p>
+      <form id="login-form" class="form-grid">
+        <div class="form-row"><label for="login-email">Administrator email</label><input id="login-email" name="email" type="email" autocomplete="username" required></div>
+        <div class="form-row"><label for="login-password">Password</label><input id="login-password" name="password" type="password" autocomplete="current-password" required></div>
+        <button class="button button-primary" type="submit"><i data-lucide="log-in" aria-hidden="true"></i><span>Sign in</span></button>
+        <p id="login-message" class="admin-message" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="dashboard-view" class="admin-dashboard hidden">
+      <div class="admin-heading">
+        <div><p class="admin-kicker">CONTROL ROOM</p><h1>Website operations</h1><p class="muted">Signed in as <span id="admin-email"></span></p></div>
+        <button id="logout-button" class="button button-secondary" type="button"><i data-lucide="log-out" aria-hidden="true"></i><span>Sign out</span></button>
+      </div>
+      <nav class="admin-tabs" aria-label="Admin sections">
+        <button type="button" class="admin-tab is-active" data-tab="leads" aria-selected="true"><i data-lucide="inbox" aria-hidden="true"></i><span>Requests</span></button>
+        <button type="button" class="admin-tab" data-tab="posts" aria-selected="false"><i data-lucide="file-pen-line" aria-hidden="true"></i><span>Blog posts</span></button>
+      </nav>
+      <p id="dashboard-message" class="admin-message" role="status" aria-live="polite"></p>
+
+      <section id="leads-panel" class="admin-panel" data-panel="leads">
+        <div class="admin-panel-heading"><div><h2>Incoming requests</h2><p class="muted">Consultation and estimator submissions</p></div><button class="button button-secondary" id="refresh-leads" type="button" aria-label="Refresh requests"><i data-lucide="refresh-cw" aria-hidden="true"></i></button></div>
+        <div id="leads-list" class="admin-list" aria-live="polite"></div>
+      </section>
+
+      <section id="posts-panel" class="admin-panel hidden" data-panel="posts">
+        <div class="admin-panel-heading"><div><h2>Blog posts</h2><p class="muted">Draft, edit, and publish site articles</p></div><button class="button button-primary" id="new-post-button" type="button"><i data-lucide="plus" aria-hidden="true"></i><span>New post</span></button></div>
+        <div class="admin-post-layout">
+          <div id="posts-list" class="admin-post-list" aria-label="Saved posts"></div>
+          <form id="post-form" class="admin-post-form">
+            <input id="post-id" name="id" type="hidden">
+            <div class="form-row"><label for="post-title">Title</label><input id="post-title" name="title" maxlength="180" required></div>
+            <div class="form-row"><label for="post-category">Category</label><input id="post-category" name="category" maxlength="60" required></div>
+            <div class="form-row"><label for="post-excerpt">Summary</label><textarea id="post-excerpt" name="excerpt" rows="3" maxlength="500" required></textarea></div>
+            <div class="form-row"><label for="post-body">Article</label><textarea id="post-body" name="body" rows="10" maxlength="50000" required></textarea></div>
+            <label class="admin-publish"><input id="post-published" name="published" type="checkbox"><span>Published on the public blog</span></label>
+            <div class="admin-form-actions"><button class="button button-primary" type="submit"><i data-lucide="save" aria-hidden="true"></i><span>Save post</span></button><button class="button button-secondary" id="delete-post-button" type="button" hidden><i data-lucide="trash-2" aria-hidden="true"></i><span>Delete</span></button></div>
+          </form>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

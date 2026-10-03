@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Read practical insights on cloud security, digital operations, and resilient technology strategy from Advanced Computer Works." />
+    <title>Blog | Advanced Computer Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/blog.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="site-nav glass-panel">
+          <a href="index.html" class="brand" aria-label="Advanced Computer Works home">
+            <div class="brand-mark"><span>ACW</span></div>
+            <div class="brand-copy">
+              <strong>Advanced Computer Works</strong>
+              <small>Enterprise Systems</small>
+            </div>
+          </a>
+
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html" data-nav>Home</a>
+            <a href="index.html#services" data-nav>Services</a>
+            <a href="index.html#how-it-works" data-nav>Workflow</a>
+            <a href="blog.html" data-nav>Blog</a>
+            <a href="about.html" data-nav>About</a>
+            <a href="password-generator.html" data-nav>Password Generator</a>
+            <a href="sitemap.html" data-nav>Sitemap</a>
+          </nav>
+
+          <a class="button button-primary" href="index.html#estimator">Book Technical Audit</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-hero">
+        <div class="container">
+          <div class="section-heading">
+            <div class="eyebrow">Insights</div>
+            <h2>Practical thinking for the operators behind modern businesses.</h2>
+            <p>Information on cloud security, system resilience, productivity, and smart digital operations for teams that want fewer surprises.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-card">
+        <div class="container article-grid" id="blog-posts">
+          <article class="article-card">
+            <span class="tag">Cloud Security</span>
+            <h3>Cloud misconfigurations are still the fastest path to data exposure.</h3>
+            <p>Public sharing, weak defaults, and missing access reviews can turn simple storage mistakes into expensive operational risk.</p>
+            <a href="index.html#estimator" class="read-more">Review your setup →</a>
+          </article>
+
+          <article class="article-card">
+            <span class="tag">Infrastructure</span>
+            <h3>The $50 security upgrade that blocks the majority of common attacks.</h3>
+            <p>Effective protection often starts with a smaller, more disciplined control set rather than a large and expensive stack.</p>
+            <a href="index.html#services" class="read-more">Explore services →</a>
+          </article>
+
+          <article class="article-card">
+            <span class="tag">Security</span>
+            <h3>Your password habits are usually more risky than your software stack.</h3>
+            <p>Strong credential hygiene remains one of the lowest-cost improvements with the highest return for businesses of any size.</p>
+            <a href="password-generator.html" class="read-more">Generate a secure password →</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="brand">
+          <div class="brand-mark"><span>ACW</span></div>
+          <div class="brand-copy">
+            <strong>Advanced Computer Works</strong>
+            <small>Enterprise Systems</small>
+          </div>
+        </div>
+        <div class="footer-links">
+          <span>© <span id="currentYear"></span> Advanced Computer Works</span>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="password-generator.html">Password Generator</a>
+          <a href="sitemap.html">Sitemap</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
